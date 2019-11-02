@@ -1,0 +1,4 @@
+<div class="notice <?=$notice_type?> notice-dismissible">
+    <p class="notice-msg"><strong><?= $_SESSION["notice"] ?></strong></p>
+    <div class="notice-dismiss glyphicon glyphicon-remove" onclick="javascript:var $ele = $(this).parent(); $ele.fadeTo(300, 0, function() {$ele.slideUp(300, function() { $ele.remove(); }); });"></div>
+</div>

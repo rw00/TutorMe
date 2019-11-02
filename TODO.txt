@@ -1,0 +1,2 @@
+1. change signup client-validation style
+2. remove obtrusive JS in signup and other pages!

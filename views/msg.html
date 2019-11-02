@@ -1,0 +1,26 @@
+<div class="list-group-item" data-ng-class="{'list-group-item-info': info.unread === '1'}">
+    <h4 class="list-group-item-heading">{{info.first_name}} {{info.last_name}}</h4>
+    <div class="list-group-item-text clearfix">
+        <div class="col-sm-8 more-text">{{info.msg_text}}</div>
+        <div class="pull-right">
+            <form action="view_msg" class="ctrls" method="get">
+                <input name="msg_id" type="hidden" value="{{info.message_id}}"/>
+                <button class="btn btn-default" type="submit">
+                    <span class="glyphicon glyphicon-envelope" title="View"></span>
+                </button>
+            </form>
+            <form action="send_msg" class="ctrls" method="get">
+                <input name="id" type="hidden" value="{{info.other_user_id}}">
+                <button class="btn btn-default" type="submit">
+                    <span class="glyphicon glyphicon-pencil" title="Reply"></span>
+                </button>
+            </form>
+            <form action="" class="ctrls" id="delete-msg-form" method="post" onsubmit="return false;">
+                <input name="msg_id" type="hidden" value="{{info.message_id}}"/>
+                <button class="btn btn-default" name="deleted" onclick="confirmDeleteMsg();" type="submit">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
